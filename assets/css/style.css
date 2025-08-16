@@ -1,19 +1,3 @@
-/*-----------------------------------*\
-  #index.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
@@ -942,7 +926,6 @@ body.nav-active { overflow: hidden; }
 
 
 
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -1000,6 +983,7 @@ body.nav-active { overflow: hidden; }
   background-size: contain;
   animation: rotate360 15s linear infinite;
 }
+
 
 
 
@@ -1165,7 +1149,7 @@ body.nav-active { overflow: hidden; }
 /*-----------------------------------*\
   #RESERVATION
 \*-----------------------------------*/
-
+/* 
 .reservation-form { margin-block-start: -270px; }
 
 .form-text { margin-block-end: 40px; }
@@ -1215,7 +1199,7 @@ textarea.input-field {
   background-position: top left;
 }
 
-
+ */
 
 
 
@@ -2140,4 +2124,173 @@ textarea.input-field {
     left: 0;
   }
 
+}
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    background-color: #edf5f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+
+  .whatsapp-float img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+/* Vision Section */
+.vision {
+  padding: 60px 0;
+  background-color: var(--eerie-black-2);
+}
+
+.vision-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Shared Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6-column grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+/* All grid items */
+.grid-item {
+  background-color: var(--eerie-black-3);
+  padding: 30px 20px;
+  border-radius: 8px;
+  transition: var(--transition-1);
+  text-align: center;
+}
+
+/* First row items (3 boxes - each spans 2 columns) */
+.grid-item:nth-child(1),
+.grid-item:nth-child(2),
+.grid-item:nth-child(3) {
+  grid-column: span 2; /* Each takes 2 of 6 columns (33.33%) */
+}
+
+/* Second row items (2 boxes - each spans 3 columns) */
+.grid-item.span-3,
+.grid-item:nth-child(4),
+.grid-item:nth-child(5) {
+  grid-column: span 3; /* Each takes 3 of 6 columns (50%) */
+}
+
+/* Certifications specific styles */
+.certifications {
+  background-color: var(--eerie-black-2);
+}
+
+.certifications .grid-item {
+  border: 1px solid var(--gold-crayola);
+}
+
+/* Hover effects */
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.grid-item .title-3 {
+  color: var(--gold-crayola);
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-item,
+  .grid-item.span-3,
+  .grid-item:nth-child(n) {
+    grid-column: span 1 !important; /* Stack all boxes */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Updated Services Section */
+.service .card-content {
+  padding: 20px;
+}
+
+.service .card-title {
+  margin-bottom: 10px;
+}
+
+.service .body-2 {
+  color: var(--quick-silver);
+}
+
+/* Why Choose Us Section */
+.features .grid-list {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  padding: 30px;
+  height: 100%;
+  transition: var(--transition-1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .card-title {
+  color: var(--gold-crayola);
+  margin: 15px 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .vision-content,
+  .capabilities .container,
+  .certifications .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .capability-item,
+  .certification-item {
+    padding: 40px 30px;
+  }
+}
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between text and image */
+}
+
+.title-wrapper img {
+  width: 110px;       /* small size */
+  height: 110px;
+  border-radius: 50%; /* makes it a circle */
+  object-fit: cover;  /* keeps image cropped properly */
+  border: 2px solid #ddd; /* optional border for neat look */
 }
